@@ -2,7 +2,7 @@ const express=require('express');
 const router = express.Router();
 const mysqlConnection =require('../db/db');
 
-
+///dsdsdsroute
 router.get('/estudiantes',(req,res)=>{
 mysqlConnection.query('SELECT * FROM actores ',(err,rows,fiels)=>{
 //callback
@@ -29,7 +29,7 @@ return console.error(err.message);
 }else{
 res.json({message:'Estudiante Matriculado'});
 
-}})// fin query insert
+}})// fin query insert  modificacioss
 })// fin nuevo-estudiante
 
 // editar un Estudiante
@@ -49,7 +49,7 @@ router.put('/estudiante/:id',(req,res)=>{
                 }// fin si
 
 
-            }
+            }//  
     )
 
 
