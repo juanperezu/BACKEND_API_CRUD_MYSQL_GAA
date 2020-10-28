@@ -42,6 +42,20 @@ res.json({message:modulo + ' Módulo Creado'})
 }// fin si
 });// fin conexion guardar un modulo
 });// fin guardar un nuevo módulo
+// modificar un modulos
+router.put('/modulo/:id',(req, res) => {
+    const{modulo,modprefijo} = req.body;
+    const {id}= req.params;
+    mysqlConnection.query('UPDATE modulos set modulo=?,mod_prefijo=? WHERE id=? ',
+    [modulo,modprefijo,id],(err,rows,fields)=>{
+    if(!err){
+      res.json({status:'Módulo: '+modulo +' actualizado'});
+    }else{
+     console.log(error);
+    }// fin si
+    }); // fin consulta de actualización
+
+})// fin modificar modulos
 
 
 module.exports=router; // siempre de última
