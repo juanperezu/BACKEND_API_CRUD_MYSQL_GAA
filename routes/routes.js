@@ -44,6 +44,7 @@ res.json({message:'Estudiante Matriculado'});
         "telefono_celular": "3023458971",
         "fecha_nacimiento": "1999-10-09",
         "institucion_id": 5*/
+        
 router.put('/estudiante/:id',(req,res)=>{
     const { nombres, apellidos, correo, documento, telefono_celular,
         fecha_nacimiento, institucion_id } = req.body;
